@@ -84,18 +84,23 @@ class Books extends Component {
                 name="description"
                 placeholder="Description (Optional)"
               />
-              <TextArea
+              <Input
                 value={this.state.image}
                 onChange={this.handleInputChange}
                 name="image"
                 placeholder="Image (Optional)"
               />
-              <TextArea
+              <Input
                 value={this.state.link}
                 onChange={this.handleInputChange}
                 name="link"
                 placeholder="Link (Optional)"
               />
+              <FormBtn
+                onClick={this.componentDidMount}
+              >
+                Find Books
+              </FormBtn>
               <FormBtn
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
